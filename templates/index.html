@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Set the background to a linear gradient */
+            background: #2c2c2c;;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+
+        .container {
+            /* Set the background to a linear gradient */
+            background: orange;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px; /* Maximum width for better display */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2c2c2c;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image for Face Detection</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="file-input" accept="image/*" required>
+            <button type="submit">Upload and Detect</button>
+        </form>
+    </div>
+</body>
+</html>

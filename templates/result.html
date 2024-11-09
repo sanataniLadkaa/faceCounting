@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2c2c2c;;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+
+        .container {
+            background: orange;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 600px; /* Maximum width for better display */
+            overflow: hidden; /* Prevent content from overflowing */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2c2c2c;
+        }
+
+        .processed-image {
+            max-width: 100%; /* Ensure the image doesn't overflow the container */
+            max-height: 400px; /* Limit the image height to 400px */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: round the image corners */
+        }
+
+        .num-faces {
+            font-size: 18px;
+            color: #2c2c2c;
+            margin-top: 10px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Face Detection Result</h1>
+        <img src="{{ url_for('static', filename='processed/' + filename) }}" alt="Processed Image" class="processed-image">
+        <p class="num-faces">Number of faces detected: {{ num_faces }}</p>
+        <a href="/"><button>Use Another Image</button></a>
+    </div>
+</body>
+</html>
