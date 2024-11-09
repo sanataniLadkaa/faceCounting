@@ -1,0 +1,6 @@
+os
+torch
+tensorflow==2.1.0
+retinaface==0.0.6
+torchvision
+cv2
