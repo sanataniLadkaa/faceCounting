@@ -1,7 +1,7 @@
-torch
-tensorflow==2.1.0
+torch==2.0.1  # Adjusted to a compatible, recent version
+torchvision==0.15.2  # Version compatible with the specified torch version
+tensorflow==2.17.1  # Updated TensorFlow version for compatibility with Python 3.12
 retinaface==0.0.6
-torchvision
-cv2
-Flask
-Pillow
+Flask==2.3.2
+Pillow==9.5.0
+opencv-python==4.7.0.68  # Replaces `cv2`, specific version for better stability
