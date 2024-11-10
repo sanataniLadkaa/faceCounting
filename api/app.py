@@ -1,6 +1,5 @@
-# api/app.py
 import os
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, url_for
 from PIL import Image, ImageDraw
 from retinaface import RetinaFace
 
@@ -59,4 +58,5 @@ def upload_file():
 def uploaded_file(filename):
     return render_template('result.html', filename=filename)
 
-
+if __name__ == '__main__':
+    app.run(host='192.168.97.66', port=5000)
