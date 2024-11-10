@@ -1,7 +1,7 @@
-torch==2.0.1  # Adjusted to a compatible, recent version
-torchvision==0.15.2  # Version compatible with the specified torch version
-tensorflow==2.17.1  # Updated TensorFlow version for compatibility with Python 3.12
+torch==2.5.1  # Latest version compatible with Vercel's environment
+torchvision==0.16.1  # Updated to match with torch 2.5.1
+tensorflow==2.17.1
 retinaface==0.0.6
 Flask==2.3.2
 Pillow==9.5.0
-opencv-python==4.7.0.68  # Replaces `cv2`, specific version for better stability
+opencv-python==4.7.0.68
